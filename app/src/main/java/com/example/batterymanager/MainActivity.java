@@ -1,17 +1,11 @@
 package com.example.batterymanager;
 
-import static java.lang.Thread.sleep;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.BatteryManager;
 import android.os.Bundle;
-import android.service.autofill.TextValueSanitizer;
-import android.util.Log;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         batterPercentageTextView = findViewById(R.id.batteryPercentage);
         batteryManager = (BatteryManager)getSystemService(BATTERY_SERVICE);
         int batteryPercentage = batteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY);
-
-        batterPercentageTextView.setText(batteryPercentage + "%");
+        String batteryPercentageText = batteryPercentage + "%";
+        batterPercentageTextView.setText(batteryPercentageText);
     }
 }
