@@ -4,58 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="500px"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#AEAEAE"
+        app:cardCornerRadius="50px"
+        app:cardElevation="50px"
+        app:contentPadding="100px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/batteryPercentage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/battery_percentage_background_green"
-        android:elevation="10dp"
-        android:fontFamily="@font/comfortaa_light"
-        android:text="0%"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/batteryVoltage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/battery_percentage_background_green"
-        android:elevation="10dp"
-        android:fontFamily="@font/comfortaa_light"
-        android:text="0 v"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:elevation="60px"
+        android:text="0 %"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
 
     <TextView
         android:id="@+id/batteryStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/battery_status_background_orange"
-        android:elevation="10dp"
-        android:fontFamily="@font/comfortaa_light"
-        android:paddingVertical="7dp"
-        android:text="Discharging"
-        android:textAlignment="center"
-        android:textColor="#000000"
+        android:elevation="55px"
+        android:text="Unknown"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/batteryPercentage"
+        app:layout_constraintStart_toStartOf="@+id/batteryPercentage"
+        app:layout_constraintTop_toBottomOf="@+id/batteryPercentage" />
 </androidx.constraintlayout.widget.ConstraintLayout>
