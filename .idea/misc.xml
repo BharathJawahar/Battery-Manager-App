@@ -13,7 +13,9 @@
         <entry key="..\:/Projects/Android Development/Android Studio/Battery-Manager-App/app/src/main/res/drawable/battery_status_background_orange.xml" value="0.14375" />
         <entry key="..\:/Projects/Android Development/Android Studio/Battery-Manager-App/app/src/main/res/drawable/round_rect_shape.xml" value="0.14375" />
         <entry key="..\:/Projects/Android Development/Android Studio/Battery-Manager-App/app/src/main/res/layout/activity_main.xml" value="0.34959349593495936" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.28894927536231885" />
+        <entry key="app/src/main/res/drawable/battery_percentage_background_blue.xml" value="0.2046875" />
+        <entry key="app/src/main/res/font/comfortaa_light.xml" value="0.21875" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
   </component>

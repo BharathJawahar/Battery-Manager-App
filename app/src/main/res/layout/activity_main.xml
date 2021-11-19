@@ -8,13 +8,29 @@
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/internet_card"
+        android:layout_width="125dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="internet"
+        app:cardCornerRadius="50px"
+
+        app:cardElevation="30px"
+        app:contentPadding="100px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
-        android:layout_height="500px"
+        android:layout_height="150dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:backgroundTint="#AEAEAE"
         app:cardCornerRadius="50px"
         app:cardElevation="50px"
         app:contentPadding="100px"
@@ -28,8 +44,10 @@
         android:id="@+id/batteryPercentage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
         android:elevation="60px"
-        android:text="0 %"
+        android:text="0%"
+
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
@@ -41,10 +59,208 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="55px"
-        android:text="Unknown"
+        android:text="Discharging"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="@+id/batteryPercentage"
         app:layout_constraintStart_toStartOf="@+id/batteryPercentage"
         app:layout_constraintTop_toBottomOf="@+id/batteryPercentage" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/wifi_card"
+        android:layout_width="125dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:onClick="wifi"
+
+        app:cardCornerRadius="50px"
+        app:cardElevation="30px"
+        app:contentPadding="100px"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:ignore="SpeakableTextPresentCheck">
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="1px"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="241dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bt_card"
+        android:layout_width="125dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="120dp"
+
+        android:onClick="bluetooth"
+        app:cardCornerRadius="50px"
+        app:cardElevation="70px"
+        app:contentPadding="100px"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/batteryManager_card"
+        android:layout_width="125dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="20dp"
+
+        android:onClick="power"
+        app:cardCornerRadius="50px"
+        app:cardElevation="30px"
+        app:contentPadding="100px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="38dp"
+        android:layout_height="45dp"
+        android:elevation="55px"
+        app:layout_constraintBottom_toBottomOf="@+id/wifi_card"
+        app:layout_constraintEnd_toEndOf="@+id/wifi_card"
+        app:layout_constraintStart_toStartOf="@+id/wifi_card"
+        app:layout_constraintTop_toTopOf="@+id/wifi_card"
+        app:srcCompat="@drawable/wifi" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="38dp"
+        android:layout_height="45dp"
+        android:elevation="55dp"
+        android:onClick="internet"
+        app:layout_constraintBottom_toBottomOf="@+id/internet_card"
+        app:layout_constraintEnd_toEndOf="@+id/internet_card"
+        app:layout_constraintStart_toStartOf="@+id/internet_card"
+        app:layout_constraintTop_toTopOf="@+id/internet_card"
+        app:srcCompat="@drawable/worldwide" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="38dp"
+        android:layout_height="45dp"
+        android:elevation="55dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_card"
+        app:layout_constraintEnd_toEndOf="@+id/bt_card"
+        app:layout_constraintStart_toStartOf="@+id/bt_card"
+        app:layout_constraintTop_toTopOf="@+id/bt_card"
+        app:srcCompat="@drawable/bluetooth" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:elevation="55dp"
+        android:onClick="power"
+        app:layout_constraintBottom_toBottomOf="@+id/batteryManager_card"
+        app:layout_constraintEnd_toEndOf="@+id/batteryManager_card"
+        app:layout_constraintStart_toStartOf="@+id/batteryManager_card"
+        app:layout_constraintTop_toTopOf="@+id/batteryManager_card"
+        app:srcCompat="@drawable/low_battery" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:text="Power Threshold"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smartSeekBar" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Smart Actions"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_card" />
+
+    <SeekBar
+        android:id="@+id/thresholdSeekBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/powerThreshold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/powerThreshold"
+        app:layout_constraintTop_toTopOf="@+id/powerThreshold" />
+
+    <Switch
+        android:id="@+id/smartSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+    <Switch
+        android:id="@+id/isPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/powerThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:text="0%"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/smartThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:text="0%"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <SeekBar
+        android:id="@+id/smartSeekBar"
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/smartThreshold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/smartThreshold"
+        app:layout_constraintTop_toTopOf="@+id/smartThreshold" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
